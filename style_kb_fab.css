@@ -1,0 +1,74 @@
+:root {
+	--font-size: 5px;
+	--space-size: 1px;
+	--reallocate-size: 2px;
+	--rotate-deg: 2deg;
+}
+.fab {
+	background-color: blue;
+	color: white;
+	margin: 0;
+	padding: 0;
+
+	text-align: center;	
+	align-items: center;	
+	justify-content: 	center;	
+	
+}
+.s1x {
+	--time: 1;
+}
+.s2x {
+	--time: 2;
+}
+.s3x {
+	--time: 3;
+}
+.s4x {
+	--time: 4;
+}
+.s5x {
+	--time: 5;
+}
+.s10x {
+	--time: 10;
+}
+.size {
+	font-size: calc(var(--font-size) * var(--time));
+	padding: calc((var(--space-size) * var(--time)));
+}
+.br1p {
+	--per: 1%;
+}.br5p {
+	--per: 5%;
+}
+.br10p {
+	--per: 10%;
+}
+.br20p {
+	--per: 20%;
+}
+.br50p {
+	--per: 50%;
+}
+.br {
+	border-radius: 	calc(var(--per));	
+}
+.square {
+	width: calc((var(--font-size)) * var(--time));
+	height: calc((var(--font-size)) * var(--time));
+}
+.shadow {
+	box-shadow: calc(var(--space-size)/2) var(--space-size) var(--space-size) calc(var(--space-size)/2) rgba(0,0,0,.3);
+	box-sizing: content-box;
+} 
+.hover{
+	transition: all .2s ease-in-out 0s;
+}
+.hover:hover {
+	--space: calc(var(--reallocate-size) * -1);
+	--deg: calc(var(--rotate-deg) * -1);
+	transform: translateY(var(--space)) rotate(var(--deg));
+
+	box-shadow: calc(var(--space-size)/2) calc(var(--space-size)*3) calc(var(--space-size)*3) calc(var(--space-size)/2) rgba(0,0,0,.3);
+}
